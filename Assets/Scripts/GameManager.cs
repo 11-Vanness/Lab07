@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,7 +40,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0;
-        Txt_Message.text = "GAMEOVER! \nPRESS ENTER TO RESTART GAME.";
-        Txt_Message.color = Color.red;
+        //Txt_Message.text = "GAMEOVER! \nPRESS ENTER TO RESTART GAME.";
+        //Txt_Message.color = Color.red;
+        SceneManager.LoadScene("GameOver");
     }
 }
